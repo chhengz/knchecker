@@ -1,72 +1,111 @@
-# React + TypeScript + Vite
+# Khmer Number Checker (KNChecker)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  
+  Small React + TypeScript utility
+  to check Cambodian phone-number
+  prefixes and display a guessed
+  operator.
 
-Currently, two official plugins are available:
+  
+  Key features
+  
+  - Detect operator by prefix using
+  the data in [src/data/operators
+  ts](src/data/operators.ts)
+  
+  - Accepts full local numbers and
+  3-digit prefix-only input (e.g.
+  `099` or `012`)
+  
+  - Displays local and
+  international formatting
+  
+  - Tailwind CSS for styling
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  
+  Quick start
 
-## Expanding the ESLint configuration
+  
+  1. Install dependencies
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+  
+  ```bash
+  npm install
+  ```
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    # Khmer Number Checker (KNChecker)
+  
+  2. Start the dev server
 
-    Small React + TypeScript utility to check Cambodian phone-number prefixes and display a guessed operator.
+  
+  ```bash
+  npm run dev
+  ```
 
-    Key features
-    - Detect operator by prefix using the data in [src/data/operators.ts](src/data/operators.ts)
-    - Accepts full local numbers and 3-digit prefix-only input (e.g. `099` or `012`)
-    - Displays local and international formatting
-    - Tailwind CSS for styling
+  
+  Build & preview
 
-    Quick start
+  
+  ```bash
+  npm run build
+  npm run preview
+  ```
 
-    1. Install dependencies
+  
+  Notes
+  
+  - The app uses `src/services
+  phoneChecker.ts` for
+  normalization, detection and
+  formatting. Prefix data is kept
+  in [src/data/operators.ts](src
+  data/operators.ts).
+  
+  - Because of mobile number
+  portability, prefix detection is
+  not a guaranteed current-operator
+  lookup — it only reflects the
+  prefix's original allocation.
 
-    ```bash
-    npm install
-    ```
+  
+  Files of interest
+  
+  - [src/App.tsx](src/App.tsx) —
+  main UI
+  
+  - [src/services/phoneChecker.ts
+  (src/services/phoneChecker.ts) —
+  logic for normalize/detect/format
+  
+  - [src/data/operators.ts](src
+  data/operators.ts) — operator
+  prefix dataset
+  
+  - [src/index.css](src/index.css)
+  — Tailwind entry and small custom
+  layers
 
-    2. Start the dev server
+  
+  Tailwind troubleshooting
+  
+  - If you see PostCSS plugin
+  errors, install `@tailwindcss
+  postcss` (the project already
+  depends on it) and restart the
+  dev server:
 
-    ```bash
-    npm run dev
-    ```
+  
+  ```bash
+  npm install -D @tailwindcss
+  postcss
+  ```
+  ```bash
+  npm run dev
+  ```
 
-    Build & preview
-
-    ```bash
-    npm run build
-    npm run preview
-    ```
-
-    Notes
-    - The app uses `src/services/phoneChecker.ts` for normalization, detection and formatting. Prefix data is kept in [src/data/operators.ts](src/data/operators.ts).
-    - Because of mobile number portability, prefix detection is not a guaranteed current-operator lookup — it only reflects the prefix's original allocation.
-
-    Files of interest
-    - [src/App.tsx](src/App.tsx) — main UI
-    - [src/services/phoneChecker.ts](src/services/phoneChecker.ts) — logic for normalize/detect/format
-    - [src/data/operators.ts](src/data/operators.ts) — operator prefix dataset
-    - [src/index.css](src/index.css) — Tailwind entry and small custom layers
-
-    Tailwind troubleshooting
-    - If you see PostCSS plugin errors, install `@tailwindcss/postcss` (the project already depends on it) and restart the dev server:
-
-    ```bash
-    npm install -D @tailwindcss/postcss
-    npm run dev
-    ```
-
-    License
-    - MIT
+  
+  License
+  
+  - MIT
 
 
 # NOT COMPLETED YET
