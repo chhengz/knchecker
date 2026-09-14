@@ -263,7 +263,14 @@ function App() {
                   <div className="operator-row">
 
                     <div className="operator-info">
-                      <div className="operator-icon">
+
+                      <img
+                        src={operator?.image || ''}
+                        alt={operator?.name || 'Unknown'}
+                        className="operator-image"
+                      />
+                    
+                      {/* <div className="operator-icon">
                         {operator?.name === 'Smart'
                           ? 'S'
                           : operator?.name === 'Cellcard'
@@ -273,7 +280,7 @@ function App() {
                               : operator?.name === 'qb'
                                 ? 'Q'
                                 : '?'}
-                      </div>
+                      </div> */}
 
                       <div>
                         <div className="small-label">

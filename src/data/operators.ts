@@ -1,13 +1,17 @@
 // src/data/operators.ts
 
+import { cellcard, smart, metfone } from '../assets';
+
 export type Operator = {
   name: string;
   prefixes: string[];
+  image: string;
 };
 
 export const operators: Operator[] = [
   {
     name: "Cellcard",
+    image: cellcard,
     prefixes: [
       "011",
       "012",
@@ -26,6 +30,7 @@ export const operators: Operator[] = [
   },
   {
     name: "Smart",
+    image: smart,
     prefixes: [
       "010",
       "015",
@@ -42,6 +47,7 @@ export const operators: Operator[] = [
   },
   {
     name: "Metfone",
+    image: metfone,
     prefixes: [
       "031",
       "060",
@@ -56,6 +62,7 @@ export const operators: Operator[] = [
   },
   {
     name: "qb",
+    image: metfone,
     prefixes: [
       "013",
       "080",

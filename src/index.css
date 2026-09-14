@@ -900,7 +900,40 @@
 
     min-width: 0;
   }
+.operator-image {
+  display: flex;
 
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 50px;
+  height: 50px;
+
+  /* padding: 1px; */
+
+  border: 1px solid
+    rgba(34, 211, 238, 0.2);
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(34, 211, 238, 0.14),
+      rgba(124, 58, 237, 0.14)
+    );
+
+  object-fit: contain;
+
+  box-shadow:
+    0 0 28px
+    rgba(34, 211, 238, 0.08),
+
+    inset 0 1px 0
+    rgba(255, 255, 255, 0.08);
+}
   .operator-icon {
     display: flex;
 
